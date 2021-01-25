@@ -1,0 +1,54 @@
+.logo {
+    width: 900px;
+    height: 600px;
+    border-radius: 5px;
+  }
+  
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .leftContent {
+    padding-left: 230px;
+  }
+  
+  .rightContent {
+    padding-left: 10px;
+    padding-right: 200px;
+  }
+
+  .formDiv {
+    text-align: center;
+    border: 1px solid white;
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+
+  .detailsDiv {
+    text-align: center;
+    border: 1px solid white;
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+
+  .alignComponents {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .textAlign {
+      text-align: center;
+  }
+
+  .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
