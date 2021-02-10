@@ -5,7 +5,7 @@ const Home = (props) => {
     return (
         <div>
             <div className='imgContainer'>
-                <img src='https://i2.wp.com/blog.logsign.com/wp-content/uploads/2019/05/Authorization-and-Authentication.png?fit=772%2C386&ssl=1' alt='Telsa car' className='logo'/>
+                <img src='https://res.cloudinary.com/practicaldev/image/fetch/s--7y7OVurK--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://i1.wp.com/blog.mallow-tech.com/wp-content/uploads/2016/12/user-authentication.jpg%3Fresize%3D820%252C400' alt='user-authentication' className='logo'/>
             </div>
             <div className='content'>
                 <div className='leftContent'>

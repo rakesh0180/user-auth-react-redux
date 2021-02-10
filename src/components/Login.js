@@ -95,6 +95,7 @@ const Login = (props) => {
                 {formErrors.email && <span style={{color:'red'}}> { formErrors.email } </span>}<br />
 
                 <TextField 
+                        type='password'
                         variant='outlined' 
                         label='Password' 
                         value={password} 
