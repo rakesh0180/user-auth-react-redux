@@ -5,6 +5,8 @@ import axios from 'axios'
 import toggleStatus from '../actions/toggleStatus'
 import { Button, Paper, TextField } from '@material-ui/core'
 import swal from 'sweetalert'
+import {startLoginUser} from '../actions/userAuth'
+
 
 const Login = (props) => {
 
@@ -59,22 +61,13 @@ const Login = (props) => {
                 password: password
             }
 
-            axios.post('http://dct-user-auth.herokuapp.com/users/login',formData)
-                .then((response) => {
-                    const result = response.data
-                    //Object.keys(result).includes('errors')
-                    if(result.hasOwnProperty('errors')) {
-                        alert(result.errors)
-                    } else {
-                        localStorage.setItem('token', result.token)
-                        props.history.push('/')
-                        swal("Cool!", "You have logged in successfully!", "success")
-                        dispatch(toggleStatus())
-                    }
-                })
-                .catch((err) => {
-                    console.log(err.message)
-                })
+            const handleRedirect = () => {
+                props.history.push('/')
+                swal("Cool!", "You have logged in successfully!", "success")
+                dispatch(toggleStatus())
+            }
+    
+            dispatch(startLoginUser(formData, handleRedirect))
     
             resetForm()
 

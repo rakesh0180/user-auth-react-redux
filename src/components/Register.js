@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import validator from 'validator'
+import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import Paper from '@material-ui/core/Paper'
 import { Button, TextField } from '@material-ui/core'
+import { startRegisterUser} from '../actions/userAuth'
 import swal from 'sweetalert'
 
 const Register = (props) => {
@@ -13,6 +15,7 @@ const Register = (props) => {
     const [formErrors, setFormErrors] = useState({})
     const errors = {}
 
+    const dispatch = useDispatch()
 
     const handleInputChange = (e) => {
         const attr = e.target.name
@@ -68,20 +71,14 @@ const Register = (props) => {
                 password: password
             }
 
-            axios.post('http://dct-user-auth.herokuapp.com/users/register',formData)           
-                .then((response) => {
-                    const result = response.data 
-                    if(result.hasOwnProperty('errors')) {
-                        alert(result.message)
-                    } else {
-                        props.history.push('/login')
-                        swal("cool", "You have registered successfully!", "success")
-                    }
-                })
-                .catch((err) => {
-                    console.log(err.message)
-                })
-
+            const handleRedirect = () => {
+                console.log('handle redirect')
+                props.history.push('/login')
+                swal('cool')
+            }
+    
+            dispatch(startRegisterUser(formData, handleRedirect))
+            
             resetForm()
 
         } else {
