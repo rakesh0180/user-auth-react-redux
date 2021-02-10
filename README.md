@@ -1,3 +1,9 @@
+# Project Description
+My-Notes is a simple note-taking app. Where you can put all your notes . It supports functionalities such as create, add and delete. It provides user-authentication which adds extra attention to your content or information.
+
+# Project's Live Link
+https://personal-notes-apps.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
