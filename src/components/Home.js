@@ -1,15 +1,11 @@
 import React from 'react'
 import '../App.css'
 
-const image = {
-    img:'https://i2.wp.com/blog.logsign.com/wp-content/uploads/2019/05/Authorization-and-Authentication.png?fit=772%2C386&ssl=1'
-  }
-
 const Home = (props) => {
     return (
         <div>
             <div className='imgContainer'>
-                <img src={image.img} alt='Telsa car' className='logo'/>
+                <img src='https://i2.wp.com/blog.logsign.com/wp-content/uploads/2019/05/Authorization-and-Authentication.png?fit=772%2C386&ssl=1' alt='Telsa car' className='logo'/>
             </div>
             <div className='content'>
                 <div className='leftContent'>
